@@ -1,4 +1,4 @@
-# ¿Puedes reconfigurar la fabrica para no parar de crear regalos? - Normal
+# ¿Puedes reconfigurar la fabrica para no parar de crear regalos? - Muy dificil
 
 Estamos en la fábrica de Santa Claus 🎅 creando regalos como si no hubiera un mañana
 
@@ -28,6 +28,20 @@ C -> J
 O -> U
 N -> FALLO
 */
+
+const from = 'XBOX'
+const to   = 'XXBO'
+const canReconfigure(from, to) // false
+/* no se puede hacer la transformación:
+X -> X
+B -> X (FALLO, no mantiene el orden de transformación)
+O -> B
+X -> O
+*/
+
+const from = 'XBOX'
+const to   = 'XOBX'
+const canReconfigure(from, to) // true
 
 const from = 'MMM'
 const to   = 'MID'
